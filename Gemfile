@@ -7,6 +7,14 @@ gem 'rails', '4.2.5'
 #gem 'sprockets', '2.11.0'
 gem 'devise', '3.4.1'
 
+gem 'instagram'
+gem 'omniauth-instagram'
+
+# http関連。サーバー側とrest fulにやり取り可能。 ##
+gem 'rest-client'
+#uri関連。api叩いて受け取るデータ形式がjsonなので。 ##
+gem 'json'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets

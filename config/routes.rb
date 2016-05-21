@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'users/show'
+
+  devise_for :users, :controllers => {
+    :registrations => "registrations",
+    :omniauth_callbacks => "omniauth_callbacks"
+  }
+  
+  resource :user, only: [:show]
   root  'static_pages#home'
 
   match '/help', to: 'static_pages#help', via: 'get'

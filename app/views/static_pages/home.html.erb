@@ -1,3 +1,12 @@
-<h1>Welcome to the Sample App</h1>
+<% if signed_in? %>
+  <p>ようこそactgramへ</p>
+    
+    
+<% else %>
 
+  <h1>さあ、登録してみましょう</h1>
+    
+    <body><%= link_to "Sign up", new_user_registration_path %>
+    </body>
 
+<% end %>
